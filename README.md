@@ -7,6 +7,7 @@ Converts a JSON schema to a Joi schema for object validation.
 add Converts to `allow(null)`
 add Converts to `Joi.object().pattern(regex,Joi.any())`
 add Converts to `Joi.string().valid(["1","2"])`
+add Converts to `Joi.string().replace("a","1")`
 ### Schema Support
 
 `enjoi` is built against json-schema v4, but does not support all of json-schema.
