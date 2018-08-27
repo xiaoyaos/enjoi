@@ -4,6 +4,7 @@
 
 Converts a JSON schema to a Joi schema for object validation.
 
+add Converts to `allow(null)`
 ### Schema Support
 
 `enjoi` is built against json-schema v4, but does not support all of json-schema.
@@ -42,13 +43,14 @@ const schema = Enjoi({
         age: {
             description: 'Age in years',
             type: 'integer',
-            minimum: 1
+            minimum: 1,
+            nullable:true   //allow(null)
         }
     },
     'required': ['firstName', 'lastName']
 });
 
-Joi.validate({firstName: 'John', lastName: 'Doe', age: 45}, schema, function (error, value) {
+Joi.validate({firstName: 'John', lastName: 'Doe', age: null}, schema, function (error, value) {
     error && console.log(error);
 });
 ```
