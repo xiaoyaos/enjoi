@@ -1,6 +1,6 @@
 {
   "name": "xy-enjoi",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "x-version":"3.2.5",
   "license": "Apache 2.0",
   "description": "Converts json-schema to Joi schema for validation.",
